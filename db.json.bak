@@ -1,0 +1,19 @@
+{
+  "course": [
+    {
+      "id": "1",
+      "name": "angular",
+      "description": "Front end"
+    },
+    {
+      "id": "2",
+      "name": "react",
+      "description": "Front end"
+    },
+    {
+      "id": "3",
+      "name": "Java",
+      "description": "Back-end"
+    }
+  ]
+}

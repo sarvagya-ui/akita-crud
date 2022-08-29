@@ -1,0 +1,45 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Course</th>
+      <th>Description</th>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <th scope="row">{{course.id}}</th>
+      <td>{{course.name}}</td>
+      <td>{{course.description}}</td>
+      <td>
+        <span>
+          <button type="button" class="btn btn-warning" (click)="update(course.id)">Update</button>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="selectedId">
+  <h6>Please provide the updated course data</h6>
+  <form (ngSubmit)="onSubmit(courseForm)" #courseForm="ngForm">
+
+    <div class="form-group">
+
+      <label for="id"> Id : </label>
+      <input class="form-control" type="text" id="id" name="id" ngModel />
+
+      <label for="name"> Name : </label>
+      <input class="form-control" type="text" id="name" name="name" ngModel />
+
+      <label for="description"> Description : </label>
+      <input class="form-control" type="text" id="description" name="description" ngModel />
+
+    </div>
+    <br>
+
+    <button class="btn btn-primary">Submit</button>
+
+  </form>
+</div>
